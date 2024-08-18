@@ -15,4 +15,18 @@ def text_process(content_message):
         ]
     )
 
-    return completion.choices[0].message.content
+    complaint_string = completion.choices[0].message.content.strip()
+
+    # Split the string by '**'
+    parts = complaint_string.split("**")
+
+    # Extract key-value pairs
+    complaint_info = {}
+    for i in range(1, len(parts), 2):
+        key = parts[i].strip().replace(':', '')
+        value = parts[i+1].strip()
+        complaint_info[key] = value
+    
+
+    return complaint_info
+ 
