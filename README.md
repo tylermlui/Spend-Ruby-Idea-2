@@ -1,4 +1,4 @@
-# Spend Ruby
+# Spend Ruby: Idea #2
 
 ## Complaint Analysis Tool
 
